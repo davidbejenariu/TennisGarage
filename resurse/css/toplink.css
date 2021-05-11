@@ -1,0 +1,33 @@
+#toplink {
+    display: block;
+
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    line-height: 2rem;
+    text-align: center;
+    
+    font-size: 2.5rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background: var(--pale-yellow);
+    color: var(--dirty-yellow);
+
+    box-shadow: 0 0 0.5rem 0.5rem var(--dirty-yellow);
+    opacity: 0.5;
+    transition: background 300ms, opacity 300ms;
+}
+
+#toplink:hover {
+    opacity: 1;
+    background: var(--strong-yellow);
+}

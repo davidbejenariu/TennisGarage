@@ -1,0 +1,183 @@
+@mixin gradientAnimation($start, $end, $transTime) {  
+    &::after {
+        content: '';
+
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 0.4rem;
+
+        display: block;
+
+        background-image: linear-gradient(-90deg, $start 0%, $start 40%, $end 60%, $end 100%);
+        background-size: 300%;
+        background-position: left;
+        transition: background-position $transTime;
+    }
+
+    &:hover {
+        &::after {
+            background-position: center;
+        }
+    }
+}
+
+@mixin colorAnimation($c1, $b1, $c2, $b2, $transTime) {
+    background: $b1;
+    transition: background $transTime linear;
+
+    a {
+        color: $c1;
+        transition: color $transTime linear;
+    }
+
+    &:hover {
+        background: $b2;
+        
+        a {
+            color: $c2;
+        }
+    }
+}
+
+body {
+    --menu-height: 3rem;
+}
+
+nav {
+    top: 0;
+    padding: 0;
+    z-index: 20;
+    position: sticky;
+    background: var(--pale-yellow);
+    width: 100%;
+
+    > ul {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        list-style-type: none;
+
+        > li {
+            float: left;
+            cursor: pointer;
+
+            &.button {
+                > a {
+                    display: inline-block;
+                    text-align: center;
+                    padding-top: 1rem;
+                    padding-right: 1.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 1.5rem;
+                    text-decoration: none;
+                    color: var(--dark-violet);
+                    font-weight: 600;
+                    height: 100%;
+                }
+                
+                &:first-child a::before {
+                    content: "\f015";
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 16px;
+                    font-weight: 900;
+                    font-style: normal;
+                    font-variant: normal;
+        
+                    display: inline-block;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+            
+                    margin: 0 0.2rem 0 0;
+                }    
+
+                @include gradientAnimation(var(--dark-violet), var(--pale-yellow), 700ms);
+            }
+
+            &.dropdown {
+                > div.description {
+                    display: inline-block;
+                    text-align: center;
+                    padding-top: 1rem;
+                    padding-right: 1.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 1.5rem;
+                    text-decoration: none;
+                    color: var(--dark-violet);
+                    font-weight: 600;
+                    height: 100%;
+                }    
+                
+                > div.description::after {
+                    content: '';
+            
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    height: 0.4rem;
+            
+                    display: block;
+            
+                    background: var(--pale-yellow);
+                }
+
+                > ul {
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    display: block;
+                    width: inherit;
+                    overflow: visible;
+
+                    transform: scaleY(0);
+                    visibility: hidden;
+                    transition: transform 300ms linear;
+
+                    > li {
+                        display: block;
+                        list-style-type: none;
+                        width: 100%;
+                        padding: 1rem 1.5rem;
+                        box-sizing: border-box;
+                        background: var(--pale-yellow);
+
+                        > a {
+                            display: block;
+                            text-align: left;
+                            text-decoration: none;
+                            color: var(--light-violet);
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &:hover {
+                    > ul {
+                        display: block;
+                        transform: scaleY(1);
+                        visibility: visible;
+
+                        > li {
+                            @include colorAnimation(var(--dark-violet), var(--pale-yellow), var(--light-violet), var(--strong-yellow), 300ms);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hamburger {
+        display: none;
+        height: var(--menu-height);
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    #small-menu {
+        display: none;
+    }
+}

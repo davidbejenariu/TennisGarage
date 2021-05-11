@@ -1,0 +1,13 @@
+<section id="animated-gallery">
+    <h2>Animated Gallery</h2>
+    <div id="animation-container">
+        <div id="animation">
+            <% for (let image of locals.animImages) { %>
+                <figure>
+                    <img src="/<%- image.big %>" alt=<%- image.title %>>
+                    <figcaption><%- image.description %></figcaption>
+                </figure>
+            <% } %>
+        </div>
+    </div>
+</section>

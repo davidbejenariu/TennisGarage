@@ -1,0 +1,43 @@
+html {
+    font-size: 10px;
+}
+
+#grid-pagina {
+    display: block;
+}
+
+.block-items {
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    width: 100%;
+}
+
+.banner {
+    animation-name: banner;
+    animation-duration: 10000ms;
+    animation-iteration-count: 0;
+    animation-timing-function: linear;
+}
+
+footer > h2::before {
+    font-size: 14px;
+}
+
+#bell {
+    font-size: 14px;
+}
+
+/* pentru error 404 */
+
+.error > p {
+    font-size: 10px;
+}
+
+/* pentru about */
+
+.about > p.subtitle {
+    font-size: 14px;
+}

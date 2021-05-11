@@ -1,0 +1,10 @@
+nav > ul.menu > li:first-child a {
+  font-size: 0;
+  padding-top: 1.15rem;
+  padding-bottom: 0.8rem;
+}
+nav > ul.menu > li:first-child a::before {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=nav-1200.css.map */

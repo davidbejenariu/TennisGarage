@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../fragments/head") %>
+        <title>Tennis Garage | Rackets, Shoes, Apparel & more</title>
+        <link rel="stylesheet" type="text/css", href="/resurse/css/animated-gallery.css"/>
+    </head>
+    <body>
+        <%- include("../fragments/header") %>
+        <div id="watermark">
+            <p>Bejenariu<br>David-Cosmin</p>
+        </div>
+        <!-- <div id="gallery">
+            <img class="slides" src="resurse/imagini/adidascover3.jpg" style="width:100%">
+            <img class="slides" src="resurse/imagini/minionscover2.jpg" style="width:100%">
+            <img class="slides" src="resurse/imagini/nole.jpg" style="width:100%">
+         
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095</button>
+        </div>
+        <script src="./resurse/javascript/script.js"></script> -->
+        <main>
+            <div id="grid-pagina">
+                <section id="new-arrivals" class="block">
+                    <div class="bell-thing">
+                        <span id="bell" class="fas fa-bell faa-ring animated faa-slow"></span>
+                        <h2>New Arrivals</h2>
+                        <span id="bell" class="fas fa-bell faa-ring animated faa-slow"></span>
+                    </div>
+                    <blockquote>
+                        <p>Here you can get yourself an outfit from the <em>latest collections</em> or buy a new racket of your favourite brand.</p>
+                    </blockquote>
+                    <div class="block-items">
+                        <section class="item">
+                            <h3>Nike Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Court Breathe Slam MB Polo Men - Violet, Multicoloured</p>
+                                <img src="/resurse/imagini/nikepolo.jpg" alt="Nike Court Breathe Slam MB Polo Men"/>
+                                <p><s>WAS € 69,99</s></p>
+                                <p><ins>NOW € 62,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Babolat Tennis Rackets</h3>
+                            <figure class="figure">
+                                <p>Pure Drive Team</p>
+                                <img src="/resurse/imagini/babolat.jpg" alt="Babolat Pure Drive Team"/>
+                                <p><s>WAS € 199,95</s></p>
+                                <p><ins>NOW € 179,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>adidas Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Performance Tank Top Women - Light Blue, White</p>
+                                <img src="/resurse/imagini/adidasdress.jpg" alt="adidas Performance Tank Top Women"/>
+                                <p><s>WAS € 30,00</s></p>
+                                <p><ins>NOW € 26,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Nike Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Court Vapor React NXT All Court Shoe Women - Orange, Lightgrey</p>
+                                <img src="/resurse/imagini/nikereact.jpg" alt="Nike Court Vapor React NXT All Court Shoe Women"/>
+                                <p><s>WAS € 179,99</s></p>
+                                <p><ins>NOW € 159,95</ins></p>
+                            </figure>
+                        </section>
+                    </div>
+                </section>
+                <section id="data" class="block">
+                    <iframe width="853" height="480" name="video" frameborder="0", src= "https://www.youtube.com/embed/5z015aAsa9I" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="tabs-iframe">
+                        <div class="tab-iframe">
+                            <a href="https://www.youtube.com/embed/5z015aAsa9I" target="video">Novak Djokovic on court at the AO 2021.</a>
+                        </div>
+                        <div class="tab-iframe">
+                            <a href="https://www.youtube.com/embed/Qn1EuDBR6M4" target="video">Adidas Melbourne Collection 2021</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="tablearea" class="block">
+                    <h2>Professional players and their gear sponsors</h2>
+                    <div id="pretable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>Clothing sponsor</th>
+                                    <th>Shoe sponsor</th>
+                                    <th>Racket sponsor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Roger Federer</td>
+                                    <td>UNIQLO</td>
+                                    <td>On</td>
+                                    <td>Wilson</td>
+                                </tr>
+                                <tr>
+                                    <td>Serena Williams</td>
+                                    <td>Nike</td>
+                                    <td>Nike</td>
+                                    <td>Wilson</td>
+                                </tr>
+                                <tr>
+                                    <td>Rafael Nadal</td>
+                                    <td>Nike</td>
+                                    <td>Nike</td>
+                                    <td>Babolat</td>
+                                </tr>
+                                <tr>
+                                    <td>Novak Djokovic</td>
+                                    <td>Lacoste</td>
+                                    <td>Asics</td>
+                                    <td>Head</td>
+                                </tr>
+                                <tr>
+                                    <td>Simona Halep</td>
+                                    <td>Nike</td>
+                                    <td>Nike</td>
+                                    <td>Wilson</td>
+                                </tr>
+                                <tr>
+                                    <td>Naomi Osaka</td>
+                                    <td>Nike</td>
+                                    <td>Nike</td>
+                                    <td>Yonex</td>
+                                </tr>
+                                <tr>
+                                    <td>Dominic Thiem</td>
+                                    <td>adidas</td>
+                                    <td>adidas</td>
+                                    <td>Babolat</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Most common choice</td>
+                                    <td>Nike</td>
+                                    <td>Nike</td>
+                                    <td>Wilson</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+                <section id="events" class="block">
+                    <h2>Events</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur suscipit finibus. Donec vel venenatis lorem. Duis sit amet feugiat ipsum. Cras vehicula magna non ultricies fermentum. Nulla elementum dolor ante. Donec nec risus et metus interdum vehicula in id velit. Mauris scelerisque odio ac placerat hendrerit.
+                       Aliquam placerat tellus ut sollicitudin ornare. In eget bibendum ante. Pellentesque congue justo sed tortor varius, quis laoreet ipsum congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam nec neque nec justo blandit hendrerit. Aenean sagittis diam sem, sit amet tempor elit molestie at. Ut fermentum luctus augue et malesuada. Nullam felis metus, bibendum ac est id, scelerisque lacinia tellus. Donec aliquam luctus libero eget congue. Ut vel risus quis neque venenatis convallis ac nec ante.</p>
+                </section>
+                <section id="online-users" class="block">
+                    <h2>Online Users Data</h2>
+                    <p>You are accessing this site by IP: <b><%= ip %></b></p>
+                </section>
+                <section id="statistics" class="block">
+                    <h2>Statistics</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur suscipit finibus. Donec vel venenatis lorem. Duis sit amet feugiat ipsum. Cras vehicula magna non ultricies fermentum. Nulla elementum dolor ante. Donec nec risus et metus interdum vehicula in id velit. Mauris scelerisque odio ac placerat hendrerit.
+                       Aliquam placerat tellus ut sollicitudin ornare. In eget bibendum ante. Pellentesque congue justo sed tortor varius, quis laoreet ipsum congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam nec neque nec justo blandit hendrerit. Aenean sagittis diam sem, sit amet tempor elit molestie at. Ut fermentum luctus augue et malesuada. Nullam felis metus, bibendum ac est id, scelerisque lacinia tellus. Donec aliquam luctus libero eget congue. Ut vel risus quis neque venenatis convallis ac nec ante.</p>
+                </section>
+                <section id="topseller" class="block">
+                    <h2>Topseller</h2>
+                    <blockquote>
+                        <p>See what people are desperately buying these days. The offers ale <em>limited</em>.</p>
+                    </blockquote>
+                    <div class="block-items">
+                        <section class="item">
+                            <h3>Babolat Tennis Strings</h3>
+                            <figure class="figure">
+                                <p>RPM Blast String Reel 200m - Black</p>
+                                <img src="/resurse/imagini/babolatstrings.jpg" alt="Babolat RPM Blast String Reel 200m"/>
+                                <p><s>WAS € 239,00</s></p>
+                                <p><ins>NOW € 144,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Wilson Tennis Rackets</h3>
+                            <figure class="figure">
+                                <p>Pro Staff 97L Tour Racket</p>
+                                <img src="/resurse/imagini/wilson.jpg" alt="Wilson Pro Staff 97L Tour"/>
+                                <p><s>WAS € 240,00</s></p>
+                                <p><ins>NOW € 129,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Luxilon Tennis Strings</h3>
+                            <figure class="figure">
+                                <p>Adrenaline Century20 String Set 12,2m Special Edition - Black</p>
+                                <img src="/resurse/imagini/luxilonstrings.jpg" alt="Luxilon Adrenaline Century20 String Set"/>
+                                <p><s>WAS € 24,00</s></p>
+                                <p><ins>NOW € 14,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Asics Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Gel-Resolution 8 Clay Tokyo Clay Court Shoe Men - Lightred, Black</p>
+                                <img src="/resurse/imagini/asicsshoes.jpg" alt="Asics Gel-Resolution 8 Clay Tokyo"/>
+                                <p><s>WAS € 140,00</s></p>
+                                <p><ins>NOW € 129,95</ins></p>
+                            </figure>
+                        </section>
+                    </div>
+                </section>
+                <section id="nike" class="block">
+                    <h2>Nike Vapor NXT</h2>
+                    <blockquote>
+                        <p>Meet the next generation of tennis performance. Built using years of athlete data, the NikeCourt React Vapor NXT brings<br>
+                        <em>top-notch traction and an innovative cushioning system</em>, so you can play at your best during your fastest and fiercest matches.</p>
+                    </blockquote>
+                    <picture class="block">
+                        <img src="/resurse/imagini/nike_vapor_cover.jpg" alt="Nike Vapor NXT"/>
+                    </picture>
+                    <div class="block-items">
+                        <section class="item">
+                            <h3>Nike Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Court Vapor React NXT All Court Shoe Women - White, Silver</p>
+                                <img src="/resurse/imagini/nike_react_white.jpg" alt="Nike Court Vapor React NXT All Court Shoe Women White"/>
+                                <p><s>WAS € 179,99</s></p>
+                                <p><ins>NOW € 159,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Nike Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Court Vapor React NXT All Court Shoe Women - Orange, Lightgrey</p>
+                                <img src="/resurse/imagini/nikereact.jpg" alt="Nike Court Vapor React NXT All Court Shoe Women Orange"/>
+                                <p><s>WAS € 179,99</s></p>
+                                <p><ins>NOW € 159,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Nike Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Court Vapor React NXT All Court Shoe Men - Black, White</p>
+                                <img src="/resurse/imagini/nike_react_men.jpg" alt="Nike Court Vapor React NXT All Court Shoe Men Black"/>
+                                <p><s>WAS € 179,99</s></p>
+                                <p><ins>NOW € 159,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Nike Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Court Vapor React NXT All Court Shoe Women - Black, Gold</p>
+                                <img src="/resurse/imagini/nike_react_blackgold.jpg" alt="Nike Court Vapor React NXT All Court Shoe Women"/>
+                                <p><s>WAS € 179,99</s></p>
+                                <p><ins>NOW € 159,95</ins></p>
+                            </figure>
+                        </section>
+                    </div>
+                </section>
+                <section id="lacoste" class="block">
+                    <h2>Lacoste Melbourne Styles</h2>
+                    <blockquote>
+                        <p>Do you want to look like <em>Novak Djokovic</em> on court? Check the freshest Asics Court FF shoes and Lacoste outfit.</p>
+                    </blockquote>
+                    <picture class="block">
+                        <img src="/resurse/imagini/nole.jpg" alt="Novak Djokovic Lacoste"/>
+                    </picture>
+                    <div class="block-items">
+                        <section class="item">
+                            <h3>Asics Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Novak Djokovic Court FF Clay Court Shoe Men - White, Green</p>
+                                <img src="/resurse/imagini/asicsnole.jpg" alt="Asics Novak Djokovic"/>
+                                <p><s>WAS € 180,00</s></p>
+                                <p><ins>NOW € 139,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Lacoste Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Novak Djokovic Polo Men - Green, White</p>
+                                <img src="/resurse/imagini/lacostenole.jpg" alt="Lacoste Novak Djokovic"/>
+                                <p><ins>€ 99,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Lacoste Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Polo Men - White, Yellow</p>
+                                <img src="/resurse/imagini/lacostepolo.jpg" alt="Lacoste Polo White"/>
+                                <p><ins>€ 94,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Lacoste Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Shorts Men - White, Yellow</p>
+                                <img src="/resurse/imagini/lacosteshorts.jpg" alt="Lacoste Shorts White"/>
+                                <p><ins>€ 74,95</ins></p>
+                            </figure>
+                        </section>
+                    </div>
+                </section>
+                <section id="adidas" class="block">
+                    <h2>adidas PRIMEBLUE x HEAT.RDY</h2>
+                    <blockquote>
+                        <p>The Melbourne collection by adidas uses only innovative materials made from <em>recycled marine plastic</em>. The integrated Heat-Ready<br>
+                        technology also ensures a cool and dry feeling and incorporated ventilation layers for maximum breathability.<br>
+                        So nothing stands in the way of the hottest Grand Slam of the year!</p>
+                        <details>
+                            <summary><strong>AND WHY?</strong></summary>
+                            <p><q>If the oceans die, we die.</q></p>
+                            ‍<p>At the Australian Open, adidas wants to use the big stage to draw attention to a sensitive issue. One of the biggest problems of our planet! The vast amounts of plastic waste in our oceans.<br>
+                            For decades, we have been using plastic carelessly and shortsightedly, without thinking of the serious consequences. It is time to make changes.<br>
+                            adidas has already started and shows that high performance apparel can also be <em>sustainable</em>.</p>
+                        </details>
+                    </blockquote>
+                    <picture class="block">
+                        <img src="/resurse/imagini/adidascover.jpg" alt="Adidas Cover"/>
+                    </picture>
+                    <div class="block-items">
+                        <section class="item">
+                            <h3>adidas Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Primeblue Freelift Print T-Shirt Men - Lemon, Black</p>
+                                <img src="/resurse/imagini/adidaspolo.jpg" alt="adidas Tee"/>
+                                <p><s>WAS € 65,00</s></p>
+                                <p><ins>NOW € 57,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>adidas Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Primeblue Ergo 9in Shorts Men - Olive, Yellow</p>
+                                <img src="/resurse/imagini/adidasshorts.jpg" alt="adidas Shorts"/>
+                                <p><s>WAS € 65,00</s></p>
+                                <p><ins>NOW € 59,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>adidas Tennis Apparel</h3>
+                            <figure class="figure">
+                                <p>Primeblue Dress Women - Dark Blue</p>
+                                <img src="/resurse/imagini/adidasmuguruzadress.jpg" alt="adidas Dress"/>
+                                <p><s>WAS € 110,00</s></p>
+                                <p><ins>NOW € 99,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>adidas Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Adizero Ubersonic 4 All Court Shoe Women - Neon Yellow, Silver</p>
+                                <img src="/resurse/imagini/adidasshoes.jpg" alt="adidas Shoes"/>
+                                <p><s>WAS € 140,00</s></p>
+                                <p><ins>NOW € 124,95</ins></p>
+                            </figure>
+                        </section>
+                    </div>
+                </section>
+                <section id="sales" class="block">
+                    <h2>Sales</h2>
+                    <blockquote>
+                        <p>The <em>hottest</em> sales at the moment. Check whether any item of your wishlist is now cheaper.</p>
+                    </blockquote>
+                    <div class="block-items">
+                        <section class="item">
+                            <h3>Wilson Tennis Rackets</h3>
+                            <figure class="figure">
+                                <!-- ceva eticheta cu sale si % -->
+                                <p>Blade 98 18x20 Countervail Tour Racket (Special Edition)</p>
+                                <img src="/resurse/imagini/salewilson.jpg" alt="Wilson Blade 98"/>
+                                <p><s>WAS € 240,00</s></p>
+                                <p><ins>NOW € 139,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>HEAD Tennis Bags</h3>
+                            <figure class="figure">
+                                <p>Radical 12R Monstercombi 12 Pack - Dark Grey, Orange</p>
+                                <img src="/resurse/imagini/saleshead.jpg" alt="HEAD Radical 12R"/>
+                                <p><s>WAS € 100,00</s></p>
+                                <p><ins>NOW € 44,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Nike Tennis Shoes</h3>
+                            <figure class="figure">
+                                <p>Air Zoom GP Turbo All Court Shoe Men - Black, Multicoloured</p>
+                                <img src="/resurse/imagini/salesnikegp.jpg" alt="Nike Air Zoom GP Turbo"/>
+                                <p><s>WAS € 139,99</s></p>
+                                <p><ins>NOW € 104,95</ins></p>
+                            </figure>
+                        </section>
+                        <section class="item">
+                            <h3>Wilson Tennis Rackets</h3>
+                            <figure class="figure">
+                                <p>BLX Pro Open Tour Racket (Special Edition)</p>
+                                <img src="/resurse/imagini/saleswilson.jpg" alt="Wilson BLX Racket"/>
+                                <p><s>WAS € 200,00</s></p>
+                                <p><ins>NOW € 79,95</ins></p>
+                            </figure>
+                        </section>
+                    </div>
+                    <div class="hrr">
+                        <hr class="hr-style">
+                    </div>
+                </section>
+                <section id="announcements" class="block">
+                    <h2>Find out more</h2>
+                    <blockquote>
+                        <details>
+                            <summary>NOT an ordinary tennis shop</summary>
+                            <p>Tennis Garage is not a usual online shop. We inspire customers around the world with a wide selection of tennis products,<br>
+                            providing the latest tennis news and a customer-friendly shopping experience. Helping you to improve your game,
+                            stimulate your talent and wake your inner champion is our main objective.
+                            </p>
+                            <p>#start discovering</p>
+                        </details>
+                        <details>
+                            <summary>Broad variety of tennis gear</summary>
+                            <p>In our tennis store you can find:</p>
+                            <ul>
+                                <li>the latest trends for the tennis court for men, women, boys and girls.</li>
+                                <li>a wide range of tennis rackets, tennis clothing, tennis shoes, tennis bags, tennis balls and tennis strings that optimize<br>
+                                    the game of beginners, intermediate players, advanced players or professionals.</li>
+                                <li>classic brands such as Nike, adidas, Asics, Under Armour, Wilson, Head, Babolat or K-Swiss,<br>
+                                    as well as tennis brands with heritage like Lacoste and Sergio Tacchini.</li>
+                                <li>the looks of the tennis stars. Are you interested in what the big tennis stars are wearing or which rackets are they playing with?<br>
+                                    In our section “Gear of the Pros” we show you the tennis gear of professional tennis players like Novak Djokovic,<br>
+                                    Rafael Nadal, Simona Halep, Roger Federer, Dominic Thiem, Sofia Kenin, Danill Medvedev, Naomi Osaka,<br>
+                                    Stefanos Tsitsipas, Bianca Andreescu, Denis Shapovalov and many others.</li>
+                            </ul>
+                            <p>#that is why buying at Tennis Garage is fun</p>
+                        </details>
+                        <details>
+                            <summary>The customers are our number ONE priority</summary>
+                            <p>Your satisfaction is our driving force! In our online tennis shop, we place a great emphasis on professional work, customer-friendly<br>
+                            user interface and well-qualified employees. If you have any questions or suggestions, do not hesitate to contact our team.
+                            </p>
+                            <p>Through our social media channels such as Facebook and Twitter, Tennis Garage becomes a meeting place for all tennis enthusiasts<br>
+                            who want to share their experiences and discover the latest trends.
+                            </p>
+                            <p>#get in touch</p>
+                        </details>
+                    </blockquote>
+                </section>
+                <%- include("../fragments/static-gallery") %>
+                <!-- <%- include("../fragments/animated-gallery") %> -->
+                <div id="video-container">
+                    <!-- playsinline autoplay loop muted -->
+                    <h2>Simona Halep, WTA Shot of the Year 2018</h2>
+                    <div id="vtt-container">
+                        <video width="480" controls preload="metadata" poster = "/resurse/imagini/halep-miami.jpg">
+                            <source src="/resurse/video/shot-of-2018.mp4" type="video/mp4">
+                            <source src="/resurse/video/shot-of-2018.avi" type="video/avi">
+                            <track src="/resurse/video/tracks/captions-ro.vtt" kind="captions" srclang="ro" label="romana">
+                            <track default src="/resurse/video/tracks/captions-en.vtt" kind="captions" srclang="en" label="english">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include("../fragments/footer") %>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+@mixin gradientAnimation($start, $end, $transTime) {  
+    &::after {
+        content: '';
+
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 0.4rem;
+
+        display: block;
+
+        background-image: linear-gradient(-90deg, $start 0%, $start 40%, $end 60%, $end 100%);
+        background-size: 300%;
+        background-position: left;
+        transition: background-position $transTime;
+    }
+
+    &:hover {
+        &::after {
+            background-position: center;
+        }
+    }
+}
+
+@mixin colorAnimation($c1, $b1, $c2, $b2, $transTime) {
+    background: $b1;
+    transition: background $transTime linear;
+
+    > a {
+        color: $c1;
+        transition: color $transTime linear;
+    }
+
+    > div {
+        color: $c1;
+        transition: color $transTime linear;
+
+        &::after {
+            background: $b1;
+            transition: background $transTime linear;
+        }
+    }
+
+    &:hover {
+        background: $b2;
+
+        > a {
+            color: $c2;
+        }
+
+        > div {
+            color: $c2;
+
+            &::after {
+                background: $b2;
+            }
+        }
+    }
+}
+
+nav {
+    > ul {
+        overflow: visible;
+
+        &.menu {
+            display: none;
+            position: absolute;
+            width: 100%;
+
+            > li {
+                width: 100%;
+                background-color: var(--pale-yellow);
+                text-align: center;
+
+                &:first-child a {
+                    &::before {
+                        font-size: 10px;
+                    }
+                }
+
+                &.button {
+                    @include gradientAnimation(var(--pale-yellow), var(--pale-yellow), 700ms);
+                    @include colorAnimation(var(--dark-violet), var(--pale-yellow), var(--light-violet), var(--strong-yellow), 300ms);
+                }
+
+                &.dropdown {
+                    @include colorAnimation(var(--dark-violet), var(--pale-yellow), var(--light-violet), var(--strong-yellow), 300ms);
+
+                    > ul {
+                        position: absolute;
+                        width: 100%;
+                        z-index: 100;
+
+                        > li a {
+                            text-align: center;
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #small-menu {
+        &:checked + ul.menu {
+            display: block;
+            transform-origin: top left;
+
+            animation-name: hamburger;
+            animation-duration: 400ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+@keyframes hamburger {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

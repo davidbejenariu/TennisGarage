@@ -1,0 +1,138 @@
+$imgCount: <%= imgCount %>;
+
+#animated-gallery {
+    background: var(--white);
+    width: 35%;
+    padding: 0;
+
+    grid-area: anim;
+    
+    > h2 {
+        background: var(--pale-yellow);
+        padding: 1rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    #animation-container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        overflow: hidden;
+        
+        #animation {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+
+            width: 100%;
+            height: 100%;
+
+            box-sizing: border-box;
+            align-items: center;
+            overflow: hidden;
+
+            // border: 0.5rem solid;
+            // border-image: url("../imagini/border-image.jpg") 30 round;
+            border: 0.5rem var(--dark-violet) solid;
+
+            & > figure {
+                grid-area: 1 / 1 / 2 / 2;
+
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                box-sizing: border-box;
+                overflow: hidden;
+
+                z-index: 0;
+                transform-origin: left center;
+
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+
+                & > figcaption {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    box-sizing: border-box;
+                    text-align: center;
+                    font-weight: bold;
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+
+                @for $i from 1 through $imgCount {
+                    &:nth-of-type(#{$i}) {
+                        animation-name: gallery;
+                        animation-duration: $imgCount * 3s;
+                        animation-timing-function: ease-out;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: forwards;
+                        animation-play-state: running;
+                        animation-delay: ($imgCount - $i) * 3s;
+                    }
+                }
+            }
+
+            @keyframes gallery {
+                0% {
+                    opacity: 1;
+                    z-index: 10;
+                    transform: scaleY(1);
+                }
+
+                #{50 / $imgCount}% {
+                    transform: scaleY(0.5);
+                    height: 100%;
+                    opacity: 1;
+                }
+
+                #{100 / $imgCount}% {
+                    z-index: 10;
+                    opacity: 0;
+                    transform: rotate(180deg);
+                    height: 0;
+                }
+
+                #{100 / $imgCount + 0.000001}% {
+                    z-index: -10;
+                    transform: scaleY(1);
+                }
+
+                #{100 - 100 / $imgCount}% {
+                    opacity: 0;
+                    z-index: -10;
+                    height: 100%;
+                    transform: scaleY(1);
+                }
+
+                #{100 - 100 / $imgCount + 0.000001}% {
+                    z-index: 0;
+                    transform: scaleY(1);
+                }
+
+                100% {
+                    opacity: 1;
+                    z-index: 0;
+                }
+            }
+
+            &:hover > figure {
+                animation-play-state: paused;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #animated-gallery {
+        display: none;
+    }
+}

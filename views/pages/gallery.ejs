@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include("../fragments/head") %>
+        <title>Tennis Garage | Gallery</title>
+        <link rel="stylesheet" href="/resurse/css/animated-gallery.css" type="text/css"/>
+    </head>
+    <body>
+        <%- include("../fragments/header") %>
+        <div id="watermark">
+            <p>Bejenariu<br>David-Cosmin</p>
+        </div>
+        <style>
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        </style>
+        <main>
+            <%- include("../fragments/static-gallery") %>
+            <%- include("../fragments/animated-gallery") %>
+        </main>
+        <%- include("../fragments/footer") %>
+    </body>
+</html>

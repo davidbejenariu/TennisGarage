@@ -1,0 +1,17 @@
+nav {
+    > ul {
+        &.menu {
+            > li {
+                &:first-child a {
+                    font-size: 0;
+                    padding-top: 1.15rem;
+                    padding-bottom: 0.8rem;
+
+                    &::before {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

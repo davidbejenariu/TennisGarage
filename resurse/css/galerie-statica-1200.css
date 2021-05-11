@@ -1,0 +1,8 @@
+#gallery-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "fig1   fig2"  
+                         "fig3   fig4"
+                         "fig5   fig6"
+                         "fig7   fig8"
+                         "fig9  fig10";
+}

@@ -1,0 +1,119 @@
+nav > ul {
+  overflow: visible;
+}
+nav > ul.menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+nav > ul.menu > li {
+  width: 100%;
+  background-color: var(--pale-yellow);
+  text-align: center;
+}
+nav > ul.menu > li:first-child a::before {
+  font-size: 10px;
+}
+nav > ul.menu > li.button {
+  background: var(--pale-yellow);
+  transition: background 300ms linear;
+}
+nav > ul.menu > li.button::after {
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0.4rem;
+  display: block;
+  background-image: linear-gradient(-90deg, var(--pale-yellow) 0%, var(--pale-yellow) 40%, var(--pale-yellow) 60%, var(--pale-yellow) 100%);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 700ms;
+}
+nav > ul.menu > li.button:hover::after {
+  background-position: center;
+}
+nav > ul.menu > li.button > a {
+  color: var(--dark-violet);
+  transition: color 300ms linear;
+}
+nav > ul.menu > li.button > div {
+  color: var(--dark-violet);
+  transition: color 300ms linear;
+}
+nav > ul.menu > li.button > div::after {
+  background: var(--pale-yellow);
+  transition: background 300ms linear;
+}
+nav > ul.menu > li.button:hover {
+  background: var(--strong-yellow);
+}
+nav > ul.menu > li.button:hover > a {
+  color: var(--light-violet);
+}
+nav > ul.menu > li.button:hover > div {
+  color: var(--light-violet);
+}
+nav > ul.menu > li.button:hover > div::after {
+  background: var(--strong-yellow);
+}
+nav > ul.menu > li.dropdown {
+  background: var(--pale-yellow);
+  transition: background 300ms linear;
+}
+nav > ul.menu > li.dropdown > a {
+  color: var(--dark-violet);
+  transition: color 300ms linear;
+}
+nav > ul.menu > li.dropdown > div {
+  color: var(--dark-violet);
+  transition: color 300ms linear;
+}
+nav > ul.menu > li.dropdown > div::after {
+  background: var(--pale-yellow);
+  transition: background 300ms linear;
+}
+nav > ul.menu > li.dropdown:hover {
+  background: var(--strong-yellow);
+}
+nav > ul.menu > li.dropdown:hover > a {
+  color: var(--light-violet);
+}
+nav > ul.menu > li.dropdown:hover > div {
+  color: var(--light-violet);
+}
+nav > ul.menu > li.dropdown:hover > div::after {
+  background: var(--strong-yellow);
+}
+nav > ul.menu > li.dropdown > ul {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+nav > ul.menu > li.dropdown > ul > li a {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+nav #hamburger {
+  display: block;
+}
+nav #small-menu:checked + ul.menu {
+  display: block;
+  transform-origin: top left;
+  animation-name: hamburger;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes hamburger {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*# sourceMappingURL=nav-500.css.map */

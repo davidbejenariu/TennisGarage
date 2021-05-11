@@ -1,0 +1,155 @@
+@media print {
+    main {
+        background-repeat: round;
+        background-attachment: unset;
+        background-size: contain;
+
+        font-size: 14px;
+    }
+
+    #grid-pagina {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "new-arrivals new-arrivals"
+                             "events       events"
+                             "topseller    topseller"
+                             "nike         nike"
+                             "lacoste      lacoste"
+                             "adidas       adidas"
+                             "sales        sales"
+                             "online-users statistics";
+    }
+
+    /* #adidas {
+        page-break-before: always;
+    }
+
+    #sales {
+        page-break-after: always;
+    } */
+
+    .main-header {
+        margin-top: 200px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .description::after {
+        display: none;
+    }
+
+    #toplink {
+        display: none;
+    }
+
+    .banner {
+        width: 50%;
+        right: 0;
+        top: 0;
+        position: absolute;
+
+        visibility: visible;
+
+        border: 0.4rem double black;
+        animation-iteration-count: 0;
+    }
+
+    .banner > h2 {
+        font-size: 16px;
+    }
+
+    video, iframe {
+        display: none;
+    }
+
+    picture.block {
+        display: none;
+    }
+
+    .toplink {
+        display: none;
+    }
+
+    nav {
+        page-break-after: always;
+    }
+
+    nav > ul {
+        overflow: visible;
+    }
+
+    nav > ul.menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+
+    nav > ul.menu > li {
+        width: 100%;
+        background-color: var(--pale-yellow);
+        text-align: center;
+    }
+
+    nav > ul.menu > li.dropdown > ul {
+        transform: scaleY(1);
+        visibility: visible;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    nav > ul.menu > li.dropdown > ul > li a {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+    #watermark {
+        display: block;
+        position: fixed;
+        top: 45%;
+        left: 20%;
+        z-index: 100;
+
+        width: 60%;
+        height: 10%;
+
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    #watermark > p {
+        position: relative;
+        top: 10%;
+        height: 100%;
+
+        color: rgba(0, 0, 0, 0.3);
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    @page {
+        size: A4 portrait;
+        margin-bottom: 2cm;
+        margin-top: 2cm;
+        counter-increment: page;
+    }
+
+    @page:left {
+        margin-left: 2cm;
+        margin-right: 1cm;
+    }
+
+    @page:right {
+        margin-left: 1cm;
+        margin-right: 2cm;
+    }
+}

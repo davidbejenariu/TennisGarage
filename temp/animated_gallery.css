@@ -1,0 +1,202 @@
+#animated-gallery {
+  background: var(--white);
+  width: 35%;
+  padding: 0;
+  grid-area: anim;
+}
+#animated-gallery > h2 {
+  background: var(--pale-yellow);
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+}
+#animated-gallery #animation-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow: hidden;
+}
+#animated-gallery #animation-container #animation {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  overflow: hidden;
+  border: 0.5rem var(--dark-violet) solid;
+}
+#animated-gallery #animation-container #animation > figure {
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 0;
+  transform-origin: left center;
+}
+#animated-gallery #animation-container #animation > figure > img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+#animated-gallery #animation-container #animation > figure > figcaption {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(1) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 30s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(2) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 27s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(3) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 24s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(4) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 21s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(5) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 18s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(6) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 15s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(7) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 12s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(8) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 9s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(9) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 6s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(10) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 3s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(11) {
+  animation-name: gallery;
+  animation-duration: 33s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 0s;
+}
+@keyframes gallery {
+  0% {
+    opacity: 1;
+    z-index: 10;
+    transform: scaleY(1);
+  }
+  4.5454545455% {
+    transform: scaleY(0.5);
+    height: 100%;
+    opacity: 1;
+  }
+  9.0909090909% {
+    z-index: 10;
+    opacity: 0;
+    transform: rotate(180deg);
+    height: 0;
+  }
+  9.0909100909% {
+    z-index: -10;
+    transform: scaleY(1);
+  }
+  90.9090909091% {
+    opacity: 0;
+    z-index: -10;
+    height: 100%;
+    transform: scaleY(1);
+  }
+  90.9090919091% {
+    z-index: 0;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    z-index: 0;
+  }
+}
+#animated-gallery #animation-container #animation:hover > figure {
+  animation-play-state: paused;
+}
+
+@media screen and (max-width: 1200px) {
+  #animated-gallery {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=animated_gallery.css.map */

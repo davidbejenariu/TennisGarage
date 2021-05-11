@@ -1,0 +1,306 @@
+@import "./nav.css";
+@import "./banner.css";
+@import "./hr.css";
+@import "./iframe.css";
+@import "./toplink.css";
+@import "./table.css";
+@import "./galerie-statica.css";
+@import "./video.css";
+
+html {
+    font-size: 16px;
+    font-family: Poppins;
+}
+
+body {
+    --strong-yellow: #FFF860;
+    --pale-yellow: #FFF987;
+    --dirty-yellow: #CFC844;
+    --dark-violet: #366FB3;
+    --light-violet: #87BEFF;
+    --white: white;
+
+    min-width: 330px;
+    margin: 0;
+}
+
+
+header > h1 {
+    margin: 0;
+    padding: 1rem 1.5rem;
+}
+
+main {
+    padding: 2rem;
+    background: url("../imagini/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+    padding: 2rem;
+}
+
+#grid-pagina {
+    display: grid;
+    grid-template-columns: auto 23% 23% 23%;
+    grid-template-areas: "new-arrivals new-arrivals new-arrivals new-arrivals"
+                         "events       tablearea    tablearea    announcements"
+                         "topseller    topseller    topseller    topseller"
+                         "nike         nike         nike         nike"
+                         "lacoste      lacoste      lacoste      lacoste"
+                         "adidas       adidas       adidas       adidas"
+                         "sales        sales        sales        sales"
+                         "data         data         online-users statistics"
+                         "s-gallery    s-gallery    s-gallery    s-gallery"
+                         ".            vtt          vtt          .";
+    grid-row-gap: 1rem;
+    column-gap: 2rem;
+}
+
+#grid-pagina section {
+    padding: 1rem;
+}
+
+/* .slides {
+    display: none;
+}
+
+#gallery {
+    grid-area: gallery;
+} */
+
+#new-arrivals {
+    grid-area: new-arrivals;
+}
+
+#events {
+    grid-area: events;
+}
+
+#tablearea {
+    grid-area: tablearea;
+}
+
+#announcements {
+    grid-area: announcements;
+}
+
+#topseller {
+    grid-area: topseller;
+}
+
+#nike {
+    grid-area: nike;
+}
+
+#lacoste {
+    grid-area: lacoste;
+}
+
+#adidas {
+    grid-area: adidas;
+}
+
+#sales {
+    grid-area: sales;
+}
+
+#data {
+    grid-area: data;
+}
+
+#online-users {
+    grid-area: online-users;
+}
+
+#statistics {
+    grid-area: statistics;
+}
+
+#static-gallery {
+    grid-area: s-gallery;
+}
+
+/* .main-header {
+    width: 100%;
+} */
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+
+    /* border: 1rem solid var(--light-violet); */
+}
+
+.block picture img { 
+    width: 100%;
+}
+
+.block img { 
+    width: 30%;
+}
+
+.block > p {
+    background: var(--white);
+    padding: 1rem;
+}
+
+/* .figure {
+    height: 100%;
+    box-sizing: border-box;
+} */
+
+.block blockquote { 
+    background: var(--white);
+    /* border: 0.5rem solid var(--dark-violet); */
+}
+
+.block blockquote > p, details {
+    padding: 0 1rem;
+}
+
+.block h2 { 
+    background: var(--pale-yellow);
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.block-items {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    width: 90%;
+    padding: 0 1rem;
+
+    counter-reset: c1;
+
+    background: var(--white);
+    /* border: 1rem solid var(--dark-violet); */
+}
+
+section > picture {
+    padding-bottom: 2rem;
+}
+
+section > picture > img {
+    border: 0.5rem solid var(--white);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    width: 100%;
+}
+
+.item::before {
+    counter-increment: c1;
+    content: "Item no. " counter(c1) ": ";
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+footer > h2::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+
+    padding-right: 0.7rem;
+}
+
+#bell {
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.bell-thing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: var(--pale-yellow);
+}
+
+.bell-thing > h2 {
+    margin: 0;
+}
+
+/* pentru error 404 */
+
+.error {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error > p {
+    background: var(--white);
+    padding: 1rem;
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.error > img {
+    width: 30%;
+    border: 0.5rem solid var(--white);
+}
+
+/* pentru about */
+
+.about {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--white);
+}
+
+.about > p {
+    margin: 1rem 2rem;
+    text-align: justify;
+}
+
+.about > p.subtitle {
+    padding-top: 1rem;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about > p.hashtag {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.about > ul {
+    margin: 0 2rem 1rem 2rem;
+}
+
+.about > ul > li {
+    margin: 0 0 1rem 0;
+    text-align: justify;
+}
+
+#watermark {
+    display: none;
+}

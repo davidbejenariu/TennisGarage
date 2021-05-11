@@ -1,0 +1,31 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Tennis Garage | Rackets, Shoes, Apparel & more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tennis",
+    "tennis",
+    "rackets",
+    "tennis",
+    "apparel",
+    "tennis",
+    "shoes",
+    "tennis",
+    "strings",
+    "Novak",
+    "Djokovic"
+  ],
+  "author": "David Bejenariu",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "map": "^1.0.1",
+    "node-sass": "^5.0.0",
+    "sharp": "^0.28.1"
+  }
+}

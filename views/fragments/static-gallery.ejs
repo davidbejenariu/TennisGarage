@@ -1,0 +1,37 @@
+<section id="static-gallery">
+    <h2>Static Gallery</h2>
+    <div id="gallery-grid">
+        <% let imgCount = 0; %>
+        <% for (let image of locals.images) { %>
+            <% if (imgCount < 10) { %>
+                <% ++imgCount; %>
+                <figure id="fig<%- imgCount %>">
+                    <div class="credits"><%- image.license %></div>
+                    <picture class="pic">
+                        <source srcset="/<%- image.small %>" media="(max-width: 500px)">
+                        <source srcset="/<%- image.medium %>" media="(max-width: 1200px)">
+                        <img src="/<%- image.big %>" onmouseover="showLicense('fig<%- imgCount %>')" onmouseout="hideLicense('fig<%- imgCount %>')" alt=<%- image.title %>>
+                        <script>
+                            function showLicense(id) {
+                                var fig = document.getElementById(id);
+                                var pic = fig.getElementsByClassName("pic");
+
+                                pic[0].style.opacity = "0.2";
+                                fig.getElementsByClassName("credits")[0].style.opacity = "1";
+                            }
+                            
+                            function hideLicense(id) {
+                                var fig = document.getElementById(id);
+                                var pic = fig.getElementsByClassName("pic");
+
+                                pic[0].style.opacity = "1";
+                                fig.getElementsByClassName("credits")[0].style.opacity = "0";
+                            }
+                        </script>
+                    </picture>
+                    <figcaption><%- image.description %></figcaption>
+                </figure>
+            <% } %>
+        <% } %>
+    </div>
+</section>

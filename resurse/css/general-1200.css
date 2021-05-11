@@ -1,0 +1,56 @@
+html {
+    font-size: 14px;
+}
+
+#grid-pagina {
+    display: grid;
+    grid-template-columns: 47% auto;
+    grid-template-areas: "gallery      gallery"
+                         "new-arrivals new-arrivals"
+                         "tablearea    tablearea"
+                         "events       announcements"
+                         "topseller    topseller"
+                         "nike         nike"
+                         "lacoste      lacoste"
+                         "adidas       adidas"
+                         "sales        sales"
+                         "data         data"
+                         "online-users statistics";
+}
+
+.block-items {
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.banner {
+    animation-name: banner;
+    animation-duration: 10000ms;
+    animation-iteration-count: 0;
+    animation-timing-function: linear;
+}
+
+footer > h2::before {
+    font-size: 18px;
+}
+
+#bell {
+    font-size: 18px;
+}
+
+/* pentru error 404 */
+
+.error > p {
+    font-size: 16px;
+}
+
+/* pentru about */
+
+.about > p.subtitle {
+    font-size: 18px;
+}

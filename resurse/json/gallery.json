@@ -1,0 +1,131 @@
+{
+    "gallery_path": "resurse/imagini/galerie",
+    "images": [
+        {
+            "path": "1.jpg",
+            "title": "Retro 1",
+            "description": "Retro Tennis Outfit, Racket and Ball",
+            "time": "08:00-12:00",
+            "license": "Free License"
+        },
+        {
+            "path": "2.jpg",
+            "title": "Retro 2",
+            "description": "Retro Tennis Setup on Clay",
+            "time": "08:00-13:00",
+            "license": "Free License"
+        },
+        {
+            "path": "3.jpg",
+            "title": "Retro 3",
+            "description": "Retro Tennis Setup on Clay",
+            "time": "10:00-14:00",
+            "license": "Free License"
+        },
+        {
+            "path": "4.jpg",
+            "title": "Retro 4",
+            "description": "Retro Tennis Backhand Preparation",
+            "time": "10:30-14:30",
+            "license": "Free License"
+        },
+        {
+            "path": "5.jpg",
+            "title": "Balls 1",
+            "description": "Tennis Balls in a Basket",
+            "time": "00:00-17:00",
+            "license": "Free License"
+        },
+        {
+            "path": "6.jpg",
+            "title": "Balls 2",
+            "description": "Tennis Balls on the Court",
+            "time": "17:00-23:59",
+            "license": "Free License"
+        },
+        {
+            "path": "7.jpg",
+            "title": "Retro 5",
+            "description": "Retro Lady on the Court",
+            "time": "15:00-20:00",
+            "license": "Free License"
+        },
+        {
+            "path": "8.jpg",
+            "title": "Racket",
+            "description": "Tennis Racket and Ball on Clay Court",
+            "time": "14:00-20:00",
+            "license": "Free License"
+        },
+        {
+            "path": "9.jpg",
+            "title": "Serve 1",
+            "description": "Serve Preparation",
+            "time": "12:00-16:00",
+            "license": "Free License"
+        },
+        {
+            "path": "10.jpg",
+            "title": "Serve 2",
+            "description": "Serve Movement",
+            "time": "12:00-16:00",
+            "license": "Free License"
+        },
+        {
+            "path": "11.jpg",
+            "title": "Net",
+            "description": "Resting by the Net",
+            "time": "22:00-06:00",
+            "license": "Free License"
+        },
+        {
+            "path": "12.jpg",
+            "title": "String Stare",
+            "description": "Player Looking Down to the Camera",
+            "time": "14:00-22:00",
+            "license": "Free License"
+        },
+        {
+            "path": "13.jpg",
+            "title": "Baseline",
+            "description": "Posing from the Baseline",
+            "time": "18:00-22:00",
+            "license": "Free License"
+        },
+        {
+            "path": "14.jpg",
+            "title": "US Open",
+            "description": "A View from the Lodges of Flushing Meadows",
+            "time": "15:00-21:00",
+            "license": "Free License"
+        },
+        {
+            "path": "15.jpg",
+            "title": "Point of View",
+            "description": "A Closer Look to a Head Racket",
+            "time": "19:00-23:00",
+            "license": "Free License"
+        },
+        {
+            "path": "16.jpg",
+            "title": "Skills",
+            "description": "The Model Is Putting on a Show",
+            "time": "19:00-22:00",
+            "license": "Free License"
+        },
+        {
+            "path": "federer.jpg",
+            "title": "Roger Federer",
+            "description": "Roger Federer, Rogers Cup 2007 Montreal",
+            "time": "00:00-23:59",
+            "license": "By franz88, licensed with CC BY-NC-SA 2.0. To view a copy of this license, visit https://creativecommons.org<wbr>/licenses/by-nc-sa/2.0/"
+        },
+        {
+            "path": "halep.jpg",
+            "title": "Simona Halep",
+            "description": "Roland Garros 2014 - Simona Halep",
+            "time": "00:00-23:59",
+            "license": "By corno.fulgur75, licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org<wbr>/licenses/by/2.0/"
+        }
+    ]
+}

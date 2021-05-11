@@ -1,0 +1,109 @@
+/* #static-gallery {
+    width: 100%;
+} */
+
+#static-gallery > h2 {
+    background: var(--pale-yellow);
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    /* color: var(--dark-violet); */
+}
+
+#gallery-grid {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "fig1  fig2  fig3  fig4"
+                         "fig5  .     .     fig6"
+                         "fig7  fig8  fig9 fig10";
+    /* grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem; */
+
+    background: var(--white);
+    box-sizing: border-box;
+}
+
+#fig1 {
+    grid-area: fig1;
+}
+
+#fig2 {
+    grid-area: fig2;
+}
+
+#fig3 {
+    grid-area: fig3;
+}
+
+#fig4 {
+    grid-area: fig4;
+}
+
+#fig5 {
+    grid-area: fig5;
+}
+
+#fig6 {
+    grid-area: fig6;
+}
+
+#fig7 {
+    grid-area: fig7;
+}
+
+#fig8 {
+    grid-area: fig8;
+}
+
+#fig9 {
+    grid-area: fig9;
+}
+
+#fig10 {
+    grid-area: fig10;
+}
+
+#gallery-grid > figure {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+
+    box-sizing: border-box;
+}
+
+.pic {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 400ms linear;
+}
+
+.credits {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 80%;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -43%);
+    transition: opacity 400ms linear;
+}
+
+#gallery-grid img {
+    width: 100%;
+}
+
+#gallery-grid figcaption {
+    padding: 0.5rem;
+    margin: 0;
+
+    text-align: center;
+    background-color: var(--pale-yellow);
+    /* color: var(--dark-violet); */
+    font-weight: bold;
+}
