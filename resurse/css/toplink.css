@@ -1,4 +1,4 @@
-#toplink {
+#toplink, .change-theme {
     display: block;
 
     position: fixed;
@@ -30,4 +30,18 @@
 #toplink:hover {
     opacity: 1;
     background: var(--strong-yellow);
+}
+
+.change-theme {
+    bottom: 110px;
+
+    background: var(--light-violet);
+    color: var(--dark-violet);
+
+    box-shadow: 0 0 0.5rem 0.5rem var(--dark-violet);
+    transition: opacity 300ms;
+}
+
+.change-theme:hover {
+    opacity: 1;
 }

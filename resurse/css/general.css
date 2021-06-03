@@ -18,21 +18,44 @@ body {
     --dirty-yellow: #CFC844;
     --dark-violet: #366FB3;
     --light-violet: #87BEFF;
-    --white: white;
+    --white: rgb(255, 255, 255);
 
     min-width: 330px;
     margin: 0;
 }
 
+body.dark {
+    --strong-yellow: #e28811;
+    --pale-yellow: #eea443;
+    --dirty-yellow: #9b5e04;
+    --dark-violet: #301163;
+    --light-violet: #532caf;
+    --white: rgba(83, 83, 83, 0.938);
+    --black: white;
+
+    min-width: 330px;
+    margin: 0;
+}
 
 header > h1 {
     margin: 0;
     padding: 1rem 1.5rem;
+
+    /* color: var(--black); */
+    background-color: var(--white);
 }
 
-main {
+.main {
     padding: 2rem;
-    background: url("../imagini/background.jpg");
+    background: url("/resurse/imagini/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.dark-main {
+    padding: 2rem;
+    background: url("/resurse/imagini/background_dark.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -40,6 +63,7 @@ main {
 
 footer {
     padding: 2rem;
+    background: var(--white);
 }
 
 #grid-pagina {
@@ -149,6 +173,11 @@ footer {
     padding: 1rem;
 }
 
+.figure a {
+    text-decoration: underline;
+    color: black;
+}
+
 /* .figure {
     height: 100%;
     box-sizing: border-box;
@@ -174,6 +203,10 @@ footer {
     display: flex;
     align-content: flex-start;
     flex-direction: row;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0; */
+
     width: 90%;
     padding: 0 1rem;
 
@@ -192,11 +225,16 @@ section > picture > img {
 }
 
 .item {
+    position: relative;
+
+    padding: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    width: 100%;
+    /* justify-content: space-between; */
 }
 
 .item::before {
@@ -208,7 +246,19 @@ section > picture > img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     width: 100%;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+/* .figure > img {
+    width: 100%;
+} */
+
+.figure > p:nth-child(1) {
+    text-align: center;
 }
 
 footer > h2::before {
@@ -300,6 +350,8 @@ footer > h2::before {
     margin: 0 0 1rem 0;
     text-align: justify;
 }
+
+/* watermark */
 
 #watermark {
     display: none;

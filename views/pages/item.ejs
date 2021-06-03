@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include("../fragments/head") %>
+        <title>Tennis Garage | Shop</title>
+        <link rel="stylesheet" href="/resurse/css/shop.css" type="text/css"/>
+    </head>
+    <body>
+        <%- include("../fragments/header") %>
+        <main class="main">
+            <article class="page-item">
+                <% const item = locals.item; %>
+                <% var title = item.brand + ' Tennis ' + item.category; %>
+                <% var name = item.name; %>
+                <% if (item.gender != 'Unisex') { %>
+                    <% name += ' ' + item.gender; %>
+                <% } %>
+                <% name += ' - '; %>
+                <% let i; %>
+                <% var colours = ""; %>
+                <% for (i = 0; i < item.colours.length - 1; ++i) { %>
+                    <% colours += item.colours[i] + ', '; %>
+                <% } %>
+                <% colours += item.colours[i]; %>
+                <% name += colours; %>
+                <div class="details-grid">
+                    <!-- TODO rescale photos -->
+                    <figure id="item-photo">
+                        <img src="/resurse/imagini/shop/<%- item.image %>" alt="[image <%- item.name %>]"/>
+                    </figure>
+                    <div class="info">
+                        <h2><%- title %></h2>
+                        <p class="name-item"><%- name %></p>
+                        <section id="item-details">
+                            <h3>Product description and details</h3>
+                            <p><%- item.description %></p>
+                            <ul id="details-list">
+                                <li>Brand: <b><%- item.brand %></b></li>
+                                <li>Gender: <b><%- item.gender %></b></li>
+                                <li>Weight: <b><%- item.weight %>g</b></li>
+                                <li>Release date: <b><time datetime="<%- locals.dateTime %>"><%- item.release_date %></time></b></li>
+                                <li>Colours: <b><%- colours %></b></li>
+                                <% var recycled; %>
+                                <% if (item.recycled) { %>
+                                    <% recycled = "This product is made from recycled material" %>
+                                <% } else { %>
+                                    <% recycled = "This product is not made from any recycled material" %>
+                                <% } %>
+                                <li><%- recycled %></li>        
+                            </ul>
+                        </section>
+                        <p class = "price-item">Price: <b><%- item.price %>£</b></p>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <%- include("../fragments/footer") %>
+    </body>
+</html>

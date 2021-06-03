@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include("../fragments/head") %>
+        <title>Tennis Garage | Shop</title>
+        <link rel="stylesheet" href="/resurse/css/shop.css" type="text/css"/>
+        <script type="text/javascript" src="/resurse/javascript/shop.js"></script>
+    </head>
+    <body>
+        <%- include("../fragments/header") %>
+        <main class="main">
+            <section id="items">
+                <h2>Products</h2>
+                <div class="filters-section">
+                    <details class="filters">
+                        <summary>Filters</summary>
+                        <div class="all-filters">
+                            <label class="filter"><b>Colours:</b> <input id="text-input" type="text" value="Black,Orange"></label>
+                            <label class="filter"><b>Weight:</b> <input id="range-input" type="range" min="100" max="900" step="1" value="900"></label>
+                            <div class="filter"><b>Gender:</b>
+                                <label><input id="radio0" checked name="radio-group" value="Unisex" type="radio"><%- locals.genders[0] %></label>
+                                <% for (let i = 1; i < locals.genders.length; ++i) { %>
+                                    <label><input id="radio<%- i %>" name="radio-group" value="<%- locals.genders[i] %>" type="radio"><%- locals.genders[i] %></label>
+                                <% } %>
+                            </div>
+                            <label class="filter"><b>Recycled materials:</b> <input id="check-input" value="1" type="checkbox"></label>
+                            <label class="filter"><b>Description keys:</b> 
+                                <textarea id="textarea-input">+new -light</textarea>
+                            </label>
+                            <label class="filter"><b>Category:</b>
+                                <select id="simple-select">
+                                    <option value="all" selected>all</option>
+                                    <% for (let i = 1; i < locals.categories.length; ++i) { %>
+                                        <option value="<%- locals.categories[i] %>"><%- locals.categories[i] %></option>
+                                    <% } %>
+                                </select>
+                            </label>
+                            <label class="filter"><b>Price range:</b>
+                                <select id="multiple-select" multiple size="3">
+                                    <option value="0-20">0-20£</option>
+                                    <option value="20-50">20-50£</option>
+                                    <option value="50-100">50-100£</option>
+                                    <option value="100-200" selected>100-200£</option>
+                                    <option value=">200">>200£</option>
+                                </select>
+                            </label>
+                        </div>
+                        <button id="filter-button">Filter</button>
+                    </details>
+                    <details class="buttons">
+                        <summary>Actions</summary>
+                        <div class="all-buttons">
+                            <button id="sort-asc" class="sort">Sort ascending by price and name</button>
+                            <button id="sort-desc" class="sort">Sort descending by price and name</button>
+                            <button id="min-price">Cheapest product</button>
+                            <button id="reset-button">Reset filters</button>
+                        </div>
+                    </details>
+                </div>
+                <div class="shop-grid">
+                    <% for (let item of locals.items) { %>
+                        <article class="shop-item">
+                            <% let title = item.brand + ' Tennis ' + item.category; %>
+                            <% let name = item.name; %>
+                            <% if (item.gender != 'Unisex') { %>
+                                <% name += ' ' + item.gender; %>
+                            <% } %>
+                            <% name += ' - '; %>
+                            <% let i; %>
+                            <% for (i = 0; i < item.colours.length - 1; ++i) { %>
+                                <% name += item.colours[i] + ', '; %>
+                            <% } %>
+                            <% name += item.colours[i]; %>
+                            <!-- paragrafe dummy pentru preluarea datelor in shop.js -->
+                            <p class="idetail"><%- item.colours %></p>
+                            <p class="idetail"><%- item.description %></p>
+                            <p class="idetail"><%- item.weight %></p>
+                            <p class="idetail"><%- item.recycled %></p>
+                            <p class="idetail"><%- item.price %></p>
+                            <p class="idetail"><%- item.category %></p>
+                            <p class="idetail"><%- item.gender %></p>
+                            <!-- paragrafe legit -->
+                            <h3><%- title %></h3>
+                            <p class="item-name"><a href="/item/<%- item.id %>"><%- name %></a></p>
+                            <figure>
+                                <img src="/resurse/imagini/shop/<%- item.image %>" alt="[image <%- item.name %>]"/>
+                            </figure>
+                            <p class="item-price"><%- item.price %>£</p>
+                        </article>
+                    <% } %>
+                </div>
+            </section>
+        </main>
+        <%- include("../fragments/footer") %>
+    </body>
+</html>

@@ -71,6 +71,7 @@ nav > ul > li.dropdown > div.description {
   color: var(--dark-violet);
   font-weight: 600;
   height: 100%;
+  cursor: default;
 }
 nav > ul > li.dropdown > div.description::after {
   content: "";
