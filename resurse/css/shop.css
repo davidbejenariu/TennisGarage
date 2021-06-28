@@ -119,7 +119,7 @@
     align-self: center;
 }
 
-.filter:nth-child(5), .filter:nth-child(6), .filter:nth-child(7) {
+.filter:nth-child(1), .filter:nth-child(5), .filter:nth-child(6), .filter:nth-child(7) {
     display: flex;
     flex-direction: row;
     align-items: center;

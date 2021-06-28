@@ -18,7 +18,7 @@ function topFunction() {
 
 // cod pentru dark theme
 
-window.addEventListener("load", function() {
+window.addEventListener("DOMContentLoaded", function() {
     let theme = localStorage.getItem("theme");
 
     if (theme == "dark") {

@@ -56,3 +56,8 @@ footer > h2::before {
 .about > p.subtitle {
     font-size: 18px;
 }
+
+#form-box {
+    width: 50%;
+    left: 25%;
+}

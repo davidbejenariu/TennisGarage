@@ -183,6 +183,10 @@ footer {
     box-sizing: border-box;
 } */
 
+#announcements blockquote {
+    padding: 1rem;
+}
+
 .block blockquote { 
     background: var(--white);
     /* border: 0.5rem solid var(--dark-violet); */
@@ -355,4 +359,50 @@ footer > h2::before {
 
 #watermark {
     display: none;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* register */
+
+#form-box {
+    width: 40%;
+    position: relative;
+    left: 30%;
+}
+
+#form-box > h2 {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background: var(--pale-yellow);
+}
+
+#reg-form {
+    padding: 1rem 2rem 1rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--white);
+}
+
+#reg-form > p {
+    font-weight: bold;
+}
+
+#reg-form input {
+    margin-left: 0.5rem;
+}
+
+#submit-reset {
+    margin-top: 2rem;
+}
+
+#messages {
+    background: var(--white);
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
 }

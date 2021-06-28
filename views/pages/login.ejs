@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include("../fragments/head") %>
+        <title>Tennis Garage | Login</title>
+    </head>
+    <body>
+        <%- include("../fragments/header") %>
+        <main class="main">
+            <div id="form-box">
+                <h2>Login</h2>
+                <form id="reg-form" method="post" action="/login">
+                    <p>
+                        <label>
+                            Username: <input type="text" name="username" value="user123">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Password: <input type="password" name="password" value="">
+                        </label>
+                    </p>
+                    <p id="submit-reset">
+                        <input type="submit" value="Submit">
+                    </p>
+                </form>
+            </div>
+        </main>
+        <%- include("../fragments/footer") %>
+    </body>
+</html>

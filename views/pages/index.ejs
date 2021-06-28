@@ -3,7 +3,6 @@
     <head>
         <%- include("../fragments/head") %>
         <title>Tennis Garage | Rackets, Shoes, Apparel & more</title>
-        <link rel="stylesheet" type="text/css", href="/resurse/css/animated-gallery.css"/>
     </head>
     <body>
         <%- include("../fragments/header") %>
@@ -149,17 +148,72 @@
                 </section>
                 <section id="events" class="block">
                     <h2>Events</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur suscipit finibus. Donec vel venenatis lorem. Duis sit amet feugiat ipsum. Cras vehicula magna non ultricies fermentum. Nulla elementum dolor ante. Donec nec risus et metus interdum vehicula in id velit. Mauris scelerisque odio ac placerat hendrerit.
-                       Aliquam placerat tellus ut sollicitudin ornare. In eget bibendum ante. Pellentesque congue justo sed tortor varius, quis laoreet ipsum congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam nec neque nec justo blandit hendrerit. Aenean sagittis diam sem, sit amet tempor elit molestie at. Ut fermentum luctus augue et malesuada. Nullam felis metus, bibendum ac est id, scelerisque lacinia tellus. Donec aliquam luctus libero eget congue. Ut vel risus quis neque venenatis convallis ac nec ante.</p>
+                    <p>
+                        <% for (let event of locals.events) { %>
+                            <span style="font-weight: bold"><%= event.text %></span>: <%= event.date %><br>
+                        <% } %>
+                    </p>
                 </section>
                 <section id="online-users" class="block">
-                    <h2>Online Users Data</h2>
-                    <p>You are accessing this site by IP: <b><%= ip %></b></p>
+                    <h2>Online Users</h2>
+                    <p style="text-align: center;">
+                        <% for (let i = 0; i < locals.onlineUsers.length - 1; ++i) { %>
+                            <%= locals.onlineUsers[i].username %>, 
+                        <% } %>
+                        <% if (locals.onlineUsers.length) { %>
+                            <%= locals.onlineUsers[locals.onlineUsers.length - 1].username %>
+                        <% } %>
+                    </p>
                 </section>
                 <section id="statistics" class="block">
                     <h2>Statistics</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur suscipit finibus. Donec vel venenatis lorem. Duis sit amet feugiat ipsum. Cras vehicula magna non ultricies fermentum. Nulla elementum dolor ante. Donec nec risus et metus interdum vehicula in id velit. Mauris scelerisque odio ac placerat hendrerit.
-                       Aliquam placerat tellus ut sollicitudin ornare. In eget bibendum ante. Pellentesque congue justo sed tortor varius, quis laoreet ipsum congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam nec neque nec justo blandit hendrerit. Aenean sagittis diam sem, sit amet tempor elit molestie at. Ut fermentum luctus augue et malesuada. Nullam felis metus, bibendum ac est id, scelerisque lacinia tellus. Donec aliquam luctus libero eget congue. Ut vel risus quis neque venenatis convallis ac nec ante.</p>
+                    <p>
+                        You are accesing this page from: <span style="font-weight: bold; margin-left: 0.3rem;"><%= locals.location %>.</span>
+                        <% 
+                            let serverDate = new Date();
+                            let dataString = serverDate.getHours() + ":" + serverDate.getMinutes() + ":" + serverDate.getSeconds();
+                        %>
+                        <br>Server time: <span id="server-date" style="font-weight: bold; margin-left: 0.3rem;"><%= dataString %></span>
+                        <br>Client time: <span id="client-date" style="font-weight: bold; margin-left: 0.3rem;"></span>
+                        <script>
+                            function zero(n) {
+                                if (n < 10) {
+                                    return '0' + n;
+                                } 
+
+                                return n;
+                            }
+
+                            function formatTime(d) {
+                                return zero(d.getHours()) + ':' + zero(d.getMinutes()) + ':' + zero(d.getSeconds());
+                            }
+
+                            d = new Date();
+                            document.getElementById("client-date").innerHTML = formatTime(d);
+
+                            function updateDateElem(id) {
+                                var date = document.getElementById(id);
+
+                                if (date.innerHTML != '') {
+                                    var time = date.innerHTML.split(":");
+                                    var newDate = new Date(2021, 6, 28, time[0], time[1], time[2]);
+                                } else {
+                                    var newDate = newDate();
+                                }
+
+                                newDate.setSeconds(newDate.getSeconds() + 1);
+                                date.innerHTML = formatTime(newDate);
+                            }
+
+                            function updateDate() {
+                                updateDateElem("server-date");
+                                updateDateElem("client-date");
+                            }
+
+                            updateDate();
+                            setInterval(updateDate, 1000);
+                        </script>
+                    </p>
                 </section>
                 <section id="topseller" class="block">
                     <h2>Topseller</h2>
@@ -441,9 +495,7 @@
                     </blockquote>
                 </section>
                 <%- include("../fragments/static-gallery") %>
-                <!-- <%- include("../fragments/animated-gallery") %> -->
                 <div id="video-container">
-                    <!-- playsinline autoplay loop muted -->
                     <h2>Simona Halep, WTA Shot of the Year 2018</h2>
                     <div id="vtt-container">
                         <video width="480" controls preload="metadata" poster = "/resurse/imagini/halep-miami.jpg">

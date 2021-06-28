@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include("../fragments/head") %>
+        <title>Tennis Garage | Register</title>
+        <script type="text/javascript" src="/resurse/javascript/register.js"></script>
+    </head>
+    <body>
+        <%- include("../fragments/header") %>
+        <main class="main">
+            <div id="form-box">
+                <h2>User Registration</h2>
+                <% if (locals.err != "") { %>
+                    <form id="reg-form" method="post" class="data" action="/reg" enctype="multipart/form-data">
+                        <p>
+                            <label>
+                                Username: <input type="text" name="username" value="user<%= Math.floor(Math.random()*100000) %>" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Last name: <input type="text" name="last_name" value="Verchinici" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                First name: <input type="text" name="first_name" value="Marian" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Password: <input id="pass" type="password" name="password" value="" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Re-enter password: <input id="rpass" type="password" name="rpassword" value="" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Email: <input id="user-email" type="text" name="email" value="ian.voodoo@gmail.com" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Phone: <input type="text" name="phone" value="" pattern="(\+4)?0[0-9]{9,}">
+                            </label>			
+                        </p>
+                        <p>
+                            <label>
+                                Profile picture: <input type="file" name="poza">
+                            </label>			
+                        </p>
+                        <p id="submit-reset">		
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </p>
+                    </form>
+                <% } %>
+                <div id="messages">
+                <% if (locals.response) { %>
+                <%- locals.response + "<br/>" %>
+                <% } %>
+                <% if (locals.err) { %>
+                <%- locals.err %>
+                <% } %>
+                </div>
+            </div>
+        </main>
+        <%- include("../fragments/footer") %>
+    </body>
+</html>

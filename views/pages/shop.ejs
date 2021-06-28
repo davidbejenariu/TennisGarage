@@ -15,7 +15,7 @@
                     <details class="filters">
                         <summary>Filters</summary>
                         <div class="all-filters">
-                            <label class="filter"><b>Colours:</b> <input id="text-input" type="text" value="Black,Orange"></label>
+                            <label class="filter"><b>Colours:<br>(e.g. Black,Orange)</b> <input id="text-input" type="text" value=""></label>
                             <label class="filter"><b>Weight:</b> <input id="range-input" type="range" min="100" max="900" step="1" value="900"></label>
                             <div class="filter"><b>Gender:</b>
                                 <label><input id="radio0" checked name="radio-group" value="Unisex" type="radio"><%- locals.genders[0] %></label>
@@ -24,8 +24,8 @@
                                 <% } %>
                             </div>
                             <label class="filter"><b>Recycled materials:</b> <input id="check-input" value="1" type="checkbox"></label>
-                            <label class="filter"><b>Description keys:</b> 
-                                <textarea id="textarea-input">+new -light</textarea>
+                            <label class="filter"><b>Description keys:<br>(e.g. +new -light)</b> 
+                                <textarea id="textarea-input"></textarea>
                             </label>
                             <label class="filter"><b>Category:</b>
                                 <select id="simple-select">
@@ -37,11 +37,11 @@
                             </label>
                             <label class="filter"><b>Price range:</b>
                                 <select id="multiple-select" multiple size="3">
-                                    <option value="0-20">0-20£</option>
-                                    <option value="20-50">20-50£</option>
-                                    <option value="50-100">50-100£</option>
+                                    <option value="0-20" selected>0-20£</option>
+                                    <option value="20-50" selected>20-50£</option>
+                                    <option value="50-100" selected>50-100£</option>
                                     <option value="100-200" selected>100-200£</option>
-                                    <option value=">200">>200£</option>
+                                    <option value=">200" selected>200£</option>
                                 </select>
                             </label>
                         </div>

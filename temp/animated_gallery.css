@@ -56,61 +56,79 @@
 }
 #animated-gallery #animation-container #animation > figure:nth-of-type(1) {
   animation-name: gallery;
-  animation-duration: 21s;
+  animation-duration: 27s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 24s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(2) {
+  animation-name: gallery;
+  animation-duration: 27s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 21s;
+}
+#animated-gallery #animation-container #animation > figure:nth-of-type(3) {
+  animation-name: gallery;
+  animation-duration: 27s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-delay: 18s;
 }
-#animated-gallery #animation-container #animation > figure:nth-of-type(2) {
+#animated-gallery #animation-container #animation > figure:nth-of-type(4) {
   animation-name: gallery;
-  animation-duration: 21s;
+  animation-duration: 27s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-delay: 15s;
 }
-#animated-gallery #animation-container #animation > figure:nth-of-type(3) {
+#animated-gallery #animation-container #animation > figure:nth-of-type(5) {
   animation-name: gallery;
-  animation-duration: 21s;
+  animation-duration: 27s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-delay: 12s;
 }
-#animated-gallery #animation-container #animation > figure:nth-of-type(4) {
+#animated-gallery #animation-container #animation > figure:nth-of-type(6) {
   animation-name: gallery;
-  animation-duration: 21s;
+  animation-duration: 27s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-delay: 9s;
 }
-#animated-gallery #animation-container #animation > figure:nth-of-type(5) {
+#animated-gallery #animation-container #animation > figure:nth-of-type(7) {
   animation-name: gallery;
-  animation-duration: 21s;
+  animation-duration: 27s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-delay: 6s;
 }
-#animated-gallery #animation-container #animation > figure:nth-of-type(6) {
+#animated-gallery #animation-container #animation > figure:nth-of-type(8) {
   animation-name: gallery;
-  animation-duration: 21s;
+  animation-duration: 27s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-delay: 3s;
 }
-#animated-gallery #animation-container #animation > figure:nth-of-type(7) {
+#animated-gallery #animation-container #animation > figure:nth-of-type(9) {
   animation-name: gallery;
-  animation-duration: 21s;
+  animation-duration: 27s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
@@ -123,28 +141,28 @@
     z-index: 10;
     transform: scaleY(1);
   }
-  7.1428571429% {
+  5.5555555556% {
     transform: scaleY(0.5);
     height: 100%;
     opacity: 1;
   }
-  14.2857142857% {
+  11.1111111111% {
     z-index: 10;
     opacity: 0;
     transform: rotate(180deg);
     height: 0;
   }
-  14.2857152857% {
+  11.1111121111% {
     z-index: -10;
     transform: scaleY(1);
   }
-  85.7142857143% {
+  88.8888888889% {
     opacity: 0;
     z-index: -10;
     height: 100%;
     transform: scaleY(1);
   }
-  85.7142867143% {
+  88.8888898889% {
     z-index: 0;
     transform: scaleY(1);
   }

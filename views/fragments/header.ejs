@@ -18,7 +18,7 @@
                 <% } %>
             </ul>
         </li>
-        <li class="dropdown">
+        <!-- <li class="dropdown">
             <div class="description">Gear of the Pros</div>
             <ul class="dropdown-content">
                 <li><a href="/index">Roger Federer</a></li>
@@ -28,12 +28,37 @@
                 <li><a href="/index">Simona Halep</a></li>
                 <li><a href="/index">Naomi Osaka</a></li>
             </ul>
-        </li>
+        </li> -->
         <li class="button">
             <a href="/gallery">Gallery</a>
         </li>
         <li class="button">
             <a href="/about">About Us</a>
         </li>
+        <% if (locals.user && locals.user.role == "admin") { %> 
+            <li class="button">
+                <a href="/users">Users</a>
+            </li>
+        <% } %>
+        <% if (!locals.user) { %>
+        <li class="button">
+            <a href="/login">Login</a>
+        </li>
+        <li class="button">
+            <a href="/register">Register</a>
+        </li>
+        <% } %>
+        <% if (locals.user) { %>
+            <li class="dropdown">
+                <div class="description">Logged in as: 
+                    <span style="font-weight: normal; margin-left: 0.5rem;"><%- locals.user.username %></span>
+                </div>
+                <ul class="dropdown-content">
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </li>
+        <% } %>
     </ul>
 </nav>

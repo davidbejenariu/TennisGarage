@@ -1,13 +1,15 @@
-function toLower(string) {
+function toLower(string) { 
+    let newString = "";
+    
     for (let i = 0; i < string.length; ++i) {
-        let letter = string.charAt(i);
-
-        if (letter >= 'A' && letter <= 'Z') {
-            string.charAt(i).toLowerCase();
+        if (string[i] >= 'A' && string[i] <= 'Z') {
+            newString += string[i].toLowerCase();
+        } else {
+            newString += string[i];
         }
     }
 
-    return string;
+    return newString;
 }
 
 async function isValid(text, textarea) {
@@ -39,6 +41,10 @@ async function isValid(text, textarea) {
 }
 
 function checkColours(filter, item) {
+    if (filter.length == 0) {
+        return true;
+    }
+
     for (let c1 of filter) {
         let found = false;
 
@@ -109,10 +115,10 @@ function checkPrice(priceRanges, item) {
 
 window.addEventListener("load", function() {
     var range = document.getElementById("range-input");
-    let currVal = document.createElement("span");
+    var currVal = document.createElement("span");
 
     range.parentNode.insertBefore(document.createTextNode(range.min + "g"), range);
-	range.parentNode.appendChild(document.createTextNode(range.max + "g"));
+    range.parentNode.appendChild(document.createTextNode(range.max + "g"));
     range.parentNode.appendChild(currVal);
     currVal.innerHTML = " (" + range.value + "g)";
 
@@ -198,10 +204,10 @@ window.addEventListener("load", function() {
 
                 let cond1 = checkColours(colours, itemColours);
                 let cond2 = itemWeight <= weight;
-                let cond3 = toLower(itemGender) == toLower(gender) || gender == "Unisex";
+                let cond3 = await toLower(itemGender) == await toLower(gender) || gender == "Unisex";
                 let cond4 = recycled == true && itemRecycled == true || recycled == false;
                 let cond5 = checkDescription(mustHave, mustMiss, itemDescription);
-                let cond6 = toLower(itemCategory) == toLower(category) || toLower(category) == "all";
+                let cond6 = await toLower(itemCategory) == await toLower(category) || await toLower(category) == "all";
                 let cond7 = checkPrice(priceRanges, itemPrice);
 
                 if (cond1 && cond2 && cond3 && cond4 && cond5 && cond6 && cond7) {
@@ -274,7 +280,7 @@ window.addEventListener("load", function() {
         button.parentNode.insertBefore(infoPrice, button.nextSibling);
         setTimeout(function() {
             infoPrice.remove();
-        }, 2000);
+        }, 5000);
     }
 
     button = document.getElementById("reset-button");
@@ -284,6 +290,27 @@ window.addEventListener("load", function() {
 
         for (let item of items) {
             item.style.display = "flex";
+        }
+
+        document.getElementById("text-input").value = "";
+        document.getElementById("range-input").value = 900;
+        currVal.innerHTML = " (900g)";
+        
+        var radio = document.getElementsByName("radio-group");
+        radio[0].checked = true;
+
+        for (let i = 1; i < radio.length; ++i) {
+            radio[i].checked = false;
+        }
+
+        document.getElementById("check-input").checked = false;
+        document.getElementById("textarea-input").value = "";
+        document.getElementById("simple-select").value = "all";
+
+        var prices = document.getElementById("multiple-select").options;
+
+        for (let i = 0; i < prices.length; ++i) {
+            prices[i].selected = true;
         }
     }
 });

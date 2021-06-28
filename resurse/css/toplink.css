@@ -45,3 +45,18 @@
 .change-theme:hover {
     opacity: 1;
 }
+
+#user-photo {
+    position: fixed;
+    bottom: 200px;
+    right: 25px;
+    z-index: 99;
+
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+
+    opacity: 70%;
+}
